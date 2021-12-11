@@ -3,6 +3,7 @@ package com.safaa.youtubeapp
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.graphics.Color
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -33,10 +34,12 @@ class RecyclerViewAdapter(var delegation : IdVideoInterface) : RecyclerView.Adap
             videoNameTV.text = currentVideo.name
             //videoImageIV.setImageResource(R.drawable.)
 
-        }
-        holder.binding.videoItem.setOnClickListener {
-            delegation.setVideoId(position)
-            Log.d("MainAdapter" , "item clicked")
+
+            videoItem.setOnClickListener {
+                delegation.setVideoId(position)
+                videoItem.setBackgroundColor(Color.parseColor("#FFDFDEDE"))
+                Log.d("MainAdapter", "item clicked")
+            }
         }
     }
     override fun getItemCount() = videoList.size

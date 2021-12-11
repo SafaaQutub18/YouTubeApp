@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/YouTubeApp/app/src/main/res/drawable/custom_border.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/YouTubeApp/app/src/main/res/layout/row_recyclerview.xml" value="0.1796875" />
         <entry key="..\:/Users/My Pc/AndroidStudioProjects/YouTubeApp/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/My Pc/AndroidStudioProjects/YouTubeApp/app/src/main/res/layout/row_recyclerview.xml" value="0.33" />
       </map>
