@@ -30,10 +30,12 @@ class MainActivity : AppCompatActivity() , IdVideoInterface {
     var selectedVideo = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         youTubePlayerView = binding.youtubePlayerView
+
         val cm = this.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val activeNetwork: NetworkInfo? = cm.activeNetworkInfo
         if (activeNetwork?.isConnectedOrConnecting == true) {
@@ -58,12 +60,10 @@ class MainActivity : AppCompatActivity() , IdVideoInterface {
 
             youTubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
                 override fun onReady(youTubePlayer: YouTubePlayer) {
-                    val videoId = selectedVideo
                     mainYouTubePlayer = youTubePlayer
                     mainYouTubePlayer.loadVideo(myVideoList[selectedVideo].id , 0f)
                 }
             })
-
 
         }
         else
@@ -75,7 +75,6 @@ class MainActivity : AppCompatActivity() , IdVideoInterface {
     override fun setVideoId(position:Int){
         selectedVideo = position
         mainYouTubePlayer.loadVideo(myVideoList[selectedVideo].id , 0f)
-
 
     }
 }
