@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.safaa.youtubeapp.databinding.RowRecyclerviewBinding
 
+
 class RecyclerViewAdapter(var delegation : IdVideoInterface) : RecyclerView.Adapter<RecyclerViewAdapter.RecyclerViewHolder>() {
     class RecyclerViewHolder(val binding: RowRecyclerviewBinding) :
         RecyclerView.ViewHolder(binding.root)
@@ -28,6 +29,7 @@ class RecyclerViewAdapter(var delegation : IdVideoInterface) : RecyclerView.Adap
     }
 
 
+
     override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
         var currentVideo = videoList[position]
         holder.binding.apply {
@@ -37,7 +39,6 @@ class RecyclerViewAdapter(var delegation : IdVideoInterface) : RecyclerView.Adap
 
             videoItem.setOnClickListener {
                 delegation.setVideoId(position)
-                videoItem.setBackgroundColor(Color.parseColor("#FFDFDEDE"))
                 Log.d("MainAdapter", "item clicked")
             }
         }
